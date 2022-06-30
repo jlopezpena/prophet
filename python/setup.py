@@ -82,7 +82,7 @@ def install_cmdstan_deps(cmdstan_dir: Path):
         if not cmdstanpy.install_cmdstan(
             version=CMDSTAN_VERSION,
             dir=cmdstan_dir.parent,
-            overwrite=True,
+            overwrite=False,
             verbose=True,
             cores=cpu_count(),
             progress=True,
