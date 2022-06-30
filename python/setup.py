@@ -82,10 +82,8 @@ def install_cmdstan_deps(cmdstan_dir: Path):
         if not cmdstanpy.install_cmdstan(
             version=CMDSTAN_VERSION,
             dir=cmdstan_dir.parent,
-            overwrite=False,
             verbose=True,
             cores=cpu_count(),
-            progress=True,
         ):
             raise RuntimeError("CmdStan failed to install in repackaged directory")
 
