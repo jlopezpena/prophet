@@ -84,6 +84,7 @@ def install_cmdstan_deps(cmdstan_dir: Path):
             dir=cmdstan_dir.parent,
             verbose=True,
             cores=cpu_count(),
+            progress=True,
         ):
             raise RuntimeError("CmdStan failed to install in repackaged directory")
 
